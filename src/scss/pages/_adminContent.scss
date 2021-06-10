@@ -1,0 +1,29 @@
+.adminContent {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  overflow-y: scroll;
+  padding-bottom: 100px;
+  h2 {
+    text-align: center;
+  }
+  table {
+    width: 100%;
+    border: 1px solid grey;
+    thead {
+      th {
+        border: 1px solid grey;
+      }
+    }
+    tbody {
+      td {
+        border: 1px solid grey;
+        text-align: center;
+        padding: 10px;
+        img {
+          width: 100px;
+        }
+      }
+    }
+  }
+}

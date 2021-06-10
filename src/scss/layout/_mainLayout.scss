@@ -1,0 +1,17 @@
+.main-layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  overflow-y: scroll;
+  footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background: var(--footer-bg);
+    position: relative;
+  }
+}

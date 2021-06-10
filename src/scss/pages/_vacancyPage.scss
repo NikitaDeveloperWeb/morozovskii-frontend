@@ -1,0 +1,22 @@
+.vacancyPage {
+  height: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 0 auto;
+  padding-bottom: 100px;
+  h1 {
+    text-align: center;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    li {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

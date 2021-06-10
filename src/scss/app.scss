@@ -1,0 +1,16 @@
+// base
+@import './base/base.scss', './base/colors.scss', './base/fonts.scss';
+// layout
+@import './layout/mainLayout';
+// pages
+@import './pages/home', './pages/productsPage', './pages/vacancyPage', './pages/feedbackPage',
+  './pages/signInPage', './pages/admin','./pages/adminContent';
+// components
+@import './components/navigation', './components/homeIntro', './components/homeBlock',
+  './components/button', './components/field', './components/forms', './components/feedbackItem',
+  './components/sortProducts', './components/modalSort', './components/vacancyItem',
+  './components/navig';
+.App {
+  width: 100vw;
+  height: 100vh;
+}

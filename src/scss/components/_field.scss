@@ -1,0 +1,118 @@
+@import '../base/colors';
+.field-main {
+  input {
+    border: none;
+    margin-left: 10px;
+    width: 400px;
+  }
+  .icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  width: 400px;
+  height: 50px;
+  padding: 5px 5px 5px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 0.5px solid var(--color-border-field);
+  border-radius: 10px;
+}
+// focus
+.field-main__focus {
+  transition: 0.7s;
+  input {
+    border: none;
+    margin-left: 10px;
+    width: 400px;
+    &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+    &::placeholder {
+      font-size: 0;
+    }
+  }
+
+  .icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    svg {
+      transition: 0.7s;
+      fill: var(--color-border-field-hover);
+    }
+  }
+  width: 400px;
+  height: 50px;
+  padding: 5px 5px 5px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 0.5px solid var(--color-border-field-hover);
+  border-radius: 10px;
+}
+// focus
+.field-main__error__focus {
+  input {
+    border: none;
+    margin-left: 10px;
+    width: 400px;
+    &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+    &::placeholder {
+      color: var(--color-border-field-error);
+    }
+  }
+
+  .icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    svg {
+      fill: var(--color-border-field-error);
+    }
+  }
+  width: 400px;
+  height: 50px;
+  padding: 5px 5px 5px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 0.5px solid var(--color-border-field-error);
+  border-radius: 10px;
+}
+.field-main__error {
+  input {
+    border: none;
+    margin-left: 10px;
+    width: 400px;
+    &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+    &::placeholder {
+      color: var(--color-border-field-error);
+    }
+  }
+
+  .icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    svg {
+      fill: var(--color-border-field-error);
+    }
+  }
+  width: 400px;
+  height: 50px;
+  padding: 5px 5px 5px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 0.5px solid var(--color-border-field-error);
+  border-radius: 10px;
+}

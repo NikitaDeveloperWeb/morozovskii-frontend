@@ -1,0 +1,139 @@
+.modalClose {
+  transition: 0.7s;
+  display: none;
+}
+.modalOpen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: var(--color-modal-secondary-bg);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__window {
+    border-radius: 10px;
+    width: 50%;
+    height: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    &__header {
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      svg {
+        cursor: pointer;
+      }
+    }
+    &__info {
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      img {
+        width: 300px;
+      }
+      &__data {
+        margin-left: 50px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+.modalSort {
+  position: relative;
+  width: 240px;
+  padding: 10px;
+  border: 1px solid var(--color-border-field);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 4px var(--color-shadow);
+
+  h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+  img {
+    width: 120px;
+    padding: 5px;
+  }
+  button {
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--color-font-title);
+    }
+  }
+}
+.modalAdm {
+  button {
+    border: none;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+      color: var(--color-button);
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .modalOpen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: var(--color-modal-secondary-bg);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__window {
+      border-radius: 10px;
+      width: 100vw;
+      height: 0 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      &__header {
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        font-size: 15px;
+        svg {
+          cursor: pointer;
+        }
+      }
+      &__info {
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img {
+          width: 100px;
+        }
+        &__data {
+          margin-left: 50px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

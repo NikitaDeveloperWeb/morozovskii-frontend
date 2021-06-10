@@ -1,0 +1,26 @@
+.admin {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto;
+  h1 {
+    text-align: center;
+    border-bottom: 1px solid var(--color-font-primory);
+  }
+  &__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    aside {
+      height: 100%;
+      border-right: 1px solid var(--color-font-primory);
+      flex: 5%;
+    }
+    &__forms {
+      flex: 95%;
+      width: 100%;
+      height: 100vh;
+    }
+  }
+}

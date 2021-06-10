@@ -1,0 +1,114 @@
+.home-block {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  // padding: 10px;
+  h2 {
+    text-align: center;
+    padding: 10px;
+  }
+  &__content {
+    padding: 20px;
+    img {
+      height: 500px;
+    }
+    p {
+      width: 600px;
+    }
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__filter {
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg-filter);
+    padding: 70px;
+    h2 {
+      text-align: center;
+      padding: 10px;
+    }
+    &__content {
+      background: rgba($color: #000000, $alpha: 0);
+      padding: 20px;
+      img {
+        height: 500px;
+        background: inherit;
+      }
+      p {
+        width: 600px;
+        background: inherit;
+      }
+      ul {
+        background: inherit;
+        li {
+          background: inherit;
+          font-size: 30px;
+        }
+      }
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+  .home-block {
+    flex-direction: column;
+    &__content {
+      flex-direction: column;
+      img {
+        width: 300px;
+        height: 450px;
+      }
+      p {
+        font-size: 15px;
+        width: 80%;
+      }
+      form {
+        .field-main {
+          width: 200px;
+          input {
+            width: 100px;
+          }
+        }
+        .field-main__focus {
+          width: 200px;
+          input {
+            width: 100px;
+          }
+        }
+      }
+      &__map {
+        iframe {
+          width: 80vw;
+        }
+      }
+    }
+    &__filter {
+      width: 100vw;
+      &__content {
+        flex-direction: column;
+
+        ul {
+          li {
+            width: 70vw;
+            font-size: 18px;
+          }
+        }
+        img {
+          width: 200px;
+          height: 180px;
+        }
+        p {
+          font-size: 10px;
+          width: 80%;
+        }
+      }
+    }
+  }
+}
