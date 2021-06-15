@@ -57,7 +57,7 @@ function UserEdit({ id }: EditProps) {
         name="usernameNew"
         className="field-main"
         fieldRef={register}
-        value={thisuser.username}
+        defaultValue={thisuser.username}
       />
       <label htmlFor="password">Новый пароль:</label>
       <Field type="password" name="passwordNew" className="field-main" fieldRef={register} />

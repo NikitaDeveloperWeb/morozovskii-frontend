@@ -49,7 +49,7 @@ function App() {
           <MainLayout content={<FeedbackPage />} />
         </Route>
         <Route exact path="/admin/signin">
-          <SignInPage />
+          {(isAuth && <Admin page="users" />) || <SignInPage />}
         </Route>
         <Route exact path="/admin/products">
           {(isAuth && <Admin page="products" />) || <SignInPage />}

@@ -69,4 +69,34 @@
       width: 250px;
     }
   }
+  .form-main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    select {
+      border-radius: 5px;
+      border: 1px solid var(--color-border-field);
+      padding: 10px;
+      width: 250px;
+    }
+    .field-main {
+      width: 250px;
+    }
+    .field-main__focus {
+      width: 250px;
+    }
+    button {
+      margin-top: 20px;
+      width: 250px;
+    }
+    textarea {
+      border-radius: 5px;
+      border: 1px solid var(--color-border-field);
+      padding: 10px;
+      height: 250px;
+      width: 250px;
+    }
+  }
 }

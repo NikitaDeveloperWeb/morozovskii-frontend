@@ -7,7 +7,7 @@ export interface ResponseApi {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any;
 }
-export const HOST = 'http://localhost:4200';
+export const HOST = 'https://morozov-server.herokuapp.com';
 // eslint-disable-next-line import/prefer-default-export
 export const AuthApi = {
   async signIn(postData: LoginProps): Promise<ResponseApi> {
@@ -18,7 +18,7 @@ export const AuthApi = {
       },
     };
     const { data } = await axios.post<ResponseApi>(
-      `${HOST}/auth/login`,
+      `https://morozov-server.herokuapp.com/auth/login`,
       {
         username: postData.username,
         password: postData.password,

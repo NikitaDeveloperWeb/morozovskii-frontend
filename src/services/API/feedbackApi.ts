@@ -2,7 +2,6 @@
 import axios from 'axios';
 import { FeedbackProps } from '../../components/forms/FeedbackForm';
 import { FeedbacksState } from '../../store/ducks/feedbacks/contracts/state';
-
 import { HOST } from './authAPI';
 
 // eslint-disable-next-line import/extensions
@@ -46,7 +45,7 @@ export const FeedbacksAPI = {
     );
     return data;
   },
-  async deleteFeedback(id?: string) {
+  async deleteFeedback(id: string) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     await axios.delete(`${HOST}/Feedbacks/${id}`);
   },

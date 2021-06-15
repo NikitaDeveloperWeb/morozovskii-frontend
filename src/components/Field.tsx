@@ -11,7 +11,7 @@ interface FieldProps {
   accept?: string;
   icon?: JSX.Element;
   children?: string;
-  value?: string;
+  defaultValue?: string;
 }
 
 function Field({
@@ -25,7 +25,7 @@ function Field({
   accept,
   icon,
   children,
-  value,
+  defaultValue,
 }: FieldProps) {
   const [focus, setFocus] = React.useState(false);
   const fieldReferens = React.useRef<HTMLDivElement>(null);
@@ -59,7 +59,7 @@ function Field({
         ref={fieldRef}
         form={form}
         accept={accept}
-        defaultValue={(value && value) || ''}
+        defaultValue={(defaultValue && defaultValue) || ''}
       />
       {children && <div className="accept">{children}</div>}
     </div>

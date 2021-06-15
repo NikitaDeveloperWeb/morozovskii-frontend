@@ -15,7 +15,7 @@ function SotrProducts() {
 
   const Bread = products.filter((prod) => prod.type === 'Хлеб');
   const Loaves = products.filter((prod) => prod.type === 'Батон');
-  const Buns = products.filter((prod) => prod.type === 'Булочное изделие');
+  const Buns = products.filter((prod) => prod.type === 'Хлебобулочное изделие');
   const [active, setActive] = React.useState(0);
 
   const handelerAciveItem = (index: number) => {

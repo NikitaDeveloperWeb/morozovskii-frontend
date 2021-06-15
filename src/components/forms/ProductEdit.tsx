@@ -77,7 +77,7 @@ function ProductEdit({ id }: ProductID) {
         name="title"
         className="field-main"
         fieldRef={register}
-        value={thisProduct?.title}
+        defaultValue={thisProduct?.title}
       />
       <label htmlFor="price">Новая цена:</label>
       <Field
@@ -85,7 +85,7 @@ function ProductEdit({ id }: ProductID) {
         name="price"
         className="field-main"
         fieldRef={register}
-        value={thisProduct.price}
+        defaultValue={thisProduct.price}
       />
       <label htmlFor="image">Новый URL изображения:</label>
       <Field
@@ -93,16 +93,16 @@ function ProductEdit({ id }: ProductID) {
         name="image"
         className="field-main"
         fieldRef={register}
-        value={thisProduct.image}
+        defaultValue={thisProduct.image}
       />
       <label htmlFor="type">Новый тип Продукта:</label>
-      <select name="type" id="" ref={register} value={thisProduct.type}>
+      <select name="type" id="" ref={register} defaultValue={thisProduct.type}>
         <option value="Хлеб">Хлеб</option>
         <option value="Батон">Батон</option>
         <option value="Булочное изделие">Булочное изделие</option>
       </select>
       <label htmlFor="composition">Новый состав:</label>
-      <textarea name="composition" ref={register} value={thisProduct.composition}></textarea>
+      <textarea name="composition" ref={register} defaultValue={thisProduct.composition}></textarea>
       <Button type="submit" value="Редактировать" className="Button-primary" />
     </form>
   );

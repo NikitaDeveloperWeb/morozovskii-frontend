@@ -31,9 +31,9 @@ function UserDelete({ id }: UserDeleteProps) {
     }
   };
   return (
-    <form className="form-main" method="POST" onSubmit={handleSubmit(onSubmit)} id="formDeleteUser">
+    <form className="form-main" method="POST" onSubmit={handleSubmit(onSubmit)}>
       <h2>Хотите удалить пользователя?</h2>
-      <Button type="submit" value="Удалить" className="Button-primary" form="formDeleteUser" />
+      <Button type="submit" value="Удалить" className="Button-primary" />
     </form>
   );
 }

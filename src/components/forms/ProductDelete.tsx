@@ -18,13 +18,13 @@ function ProductDelete({ id }: ProductDeleteProps) {
     resolver: yupResolver(ProductDeleteSchema),
   });
   const onSubmit = async (data: ProductProps) => {
-    dispatch(fetchProducts());
-    alert('Продукт успешно удален!');
-
     try {
       await ProductsAPI.deleteProduct(ID);
+      alert('Продукт успешно удален!');
+      dispatch(fetchProducts());
     } catch (error) {}
   };
+
   return (
     <form className="form-main" onSubmit={handleSubmit(onSubmit)}>
       <h2>Хотите удалить продукт?</h2>

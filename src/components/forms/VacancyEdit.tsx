@@ -57,7 +57,7 @@ function VacancyEdit({ id }: VacancyEditProps) {
         name="title"
         className="field-main"
         fieldRef={register}
-        value={thisVacancy.title}
+        defaultValue={thisVacancy.title}
       />
       <label htmlFor="sallary">Новая ЗП:</label>
       <Field
@@ -65,10 +65,10 @@ function VacancyEdit({ id }: VacancyEditProps) {
         name="sallary"
         className="field-main"
         fieldRef={register}
-        value={thisVacancy.sallary}
+        defaultValue={thisVacancy.sallary}
       />
       <label htmlFor="claim">Новые требования:</label>
-      <textarea name="claim" ref={register} value={thisVacancy.claim}></textarea>
+      <textarea name="claim" ref={register} defaultValue={thisVacancy.claim}></textarea>
       <Button type="submit" value="Редактировать" className="Button-primary" />
     </form>
   );

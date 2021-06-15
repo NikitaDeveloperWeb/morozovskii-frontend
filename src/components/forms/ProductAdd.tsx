@@ -50,7 +50,7 @@ function ProductAdd() {
       <select name="type" id="" ref={register}>
         <option value="Хлеб">Хлеб</option>
         <option value="Батон">Батон</option>
-        <option value="Булочное изделие">Булочное изделие</option>
+        <option value="Хлебобулочное изделие">Хлебобулочное изделие</option>
       </select>
       <label htmlFor="composition">Состав:</label>
       <textarea name="composition" ref={register}></textarea>
