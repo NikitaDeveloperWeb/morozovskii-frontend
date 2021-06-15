@@ -19,10 +19,7 @@ function ContactUsForm() {
   const onSubmit = async (data: FeedbackProps) => {
     try {
       let DATE = new Date();
-      let Day = DATE.getDay();
-      let Month = DATE.getMonth();
-      let Year = DATE.getFullYear();
-      data.date = `${Day}/${Month}/${Year}`;
+      data.date = DATE.toUTCString();
       data.type = 'Сотрудничество';
       await FeedbacksAPI.addFeedback(data);
       dispatch(fetchFeedbacks());

@@ -33,10 +33,7 @@ function FeedbackForm() {
   const onSubmit = async (data: FeedbackProps) => {
     try {
       let DATE = new Date();
-      let Day = DATE.getDay().toString();
-      let Month = DATE.getMonth().toString();
-      let Year = DATE.getFullYear().toString();
-      data.date = `${Day}/${Month}/${Year}`;
+      data.date = DATE.toUTCString();
       await FeedbacksAPI.addFeedback(data);
       dispatch(fetchFeedbacks());
       alert(`Ваше сообщение успешно отправлено!`);

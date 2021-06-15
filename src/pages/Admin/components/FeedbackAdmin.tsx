@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import FeedbackDelete from '../../../components/forms/FeedbackDelete';
-import ModalAdm from '../../../components/ModalAdm';
+// import FeedbackDelete from '../../../components/forms/FeedbackDelete';
+// import ModalAdm from '../../../components/ModalAdm';
 import { fetchFeedbacks } from '../../../store/ducks/feedbacks/actionCreators';
 import { SelectFeedbackItems } from '../../../store/ducks/feedbacks/selectors';
 
@@ -21,23 +21,24 @@ function FeedbackAdmin() {
               <tr>
                 {/* <th>ID</th> */}
                 <th>ФИО</th>
+                <th>Телефон</th>
                 <th>Тип</th>
-                <th>Обращение</th>
                 <th>Дата</th>
-                <th>Действия</th>
+                <th>Обращение</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 {/* <td>{feedback._id}</td> */}
                 <td>{feedback.name}</td>
+                <td>{feedback.phone}</td>
                 <td>{feedback.type}</td>
                 <td>{feedback.date}</td>
                 <td>{feedback.text}</td>
 
-                <td>
+                {/* <td>
                   <ModalAdm title="Удалить..." form={<FeedbackDelete id={feedback._id} />} />
-                </td>
+                </td> */}
               </tr>
             </tbody>
           </React.Fragment>
