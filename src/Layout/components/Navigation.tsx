@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import PhoneIcon from '@material-ui/icons/Phone';
 const Links = [
   {
-    title: 'А',
-    path: '/admin/signin',
-  },
-  {
     title: 'Главная',
     path: '/',
   },
