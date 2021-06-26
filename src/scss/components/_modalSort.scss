@@ -16,8 +16,9 @@
   justify-content: center;
   align-items: center;
   &__window {
+    // overflow-y: scroll;
     border-radius: 10px;
-    width: 50%;
+    width: 60%;
     height: 0 auto;
     display: flex;
     flex-direction: column;
@@ -37,8 +38,23 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      img {
-        width: 300px;
+      &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          padding: 5px;
+          width: 400px;
+        }
+        .arrow {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          &:hover {
+            transform: rotate(360deg);
+            transition: 1s;
+          }
+        }
       }
       &__data {
         margin-left: 50px;
@@ -104,6 +120,7 @@
     justify-content: center;
     align-items: center;
     &__window {
+      overflow-y: scroll;
       border-radius: 10px;
       width: 100vw;
       height: 0 auto;

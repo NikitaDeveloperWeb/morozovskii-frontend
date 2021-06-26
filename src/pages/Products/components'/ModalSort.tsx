@@ -1,14 +1,17 @@
 import React from 'react';
 import CloseIcon from '@material-ui/icons/Close';
+import arrow from '../../../assets/images/arrow.png';
 interface ModalSortProps {
   _id: string;
   title: string;
   image: string;
+  image2: string;
+  image3: string;
   composition: string;
   price: number | string;
 }
 
-function ModalSort({ _id, title, image, composition, price }: ModalSortProps) {
+function ModalSort({ _id, title, image, image2, image3, composition, price }: ModalSortProps) {
   const [open, setOpen] = React.useState(false);
   const modalRef = React.useRef<HTMLDivElement>(null);
   const handleOpen = () => {
@@ -16,6 +19,14 @@ function ModalSort({ _id, title, image, composition, price }: ModalSortProps) {
   };
   const handleClose = () => {
     setOpen(false);
+  };
+
+  // slider
+  const [activeImage, setActiveImage] = React.useState(image2);
+
+  const handlerActiveImage = (image: string) => {
+    console.log(image);
+    setActiveImage(image);
   };
 
   const handleOutsideClick = (event: any) => {
@@ -44,7 +55,26 @@ function ModalSort({ _id, title, image, composition, price }: ModalSortProps) {
             <CloseIcon onClick={() => handleClose()} />
           </div>
           <div className="modalOpen__window__info">
-            <img src={image} alt={title} />
+            <div className="modalOpen__window__info__img">
+              <img
+                src={arrow}
+                alt=""
+                className="arrow"
+                style={{ transform: 'rotate(180deg)' }}
+                onClick={() => {
+                  handlerActiveImage(activeImage !== image2 ? image2 : image3);
+                }}
+              />
+              <img src={activeImage} alt={title} />
+              <img
+                src={arrow}
+                alt=""
+                className="arrow"
+                onClick={() => {
+                  handlerActiveImage(activeImage !== image2 ? image2 : image3);
+                }}
+              />
+            </div>
             <div className="modalOpen__window__info__data">
               <h3>Состав:</h3>
               <p>{composition}</p>

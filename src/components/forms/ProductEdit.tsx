@@ -17,6 +17,8 @@ interface ProductEditProps {
   composition: string;
   price: number;
   image: string;
+  image2?: string;
+  image3?: string;
   type: string;
 }
 
@@ -28,6 +30,8 @@ const ProductEditSchema = yup.object().shape({
   title: yup.string(),
   composition: yup.string(),
   image: yup.string(),
+  image2: yup.string(),
+  image3: yup.string(),
   type: yup.string(),
   price: yup.number(),
 });
@@ -58,6 +62,8 @@ function ProductEdit({ id }: ProductID) {
     id: ID,
     type: '',
     image: '',
+    image2: '',
+    image3: '',
   };
   // eslint-disable-next-line array-callback-return
   products.map((product) => {
@@ -67,6 +73,8 @@ function ProductEdit({ id }: ProductID) {
       thisProduct.price = product.price;
       thisProduct.type = product.type;
       thisProduct.image = product.image;
+      thisProduct.image2 = product.image2;
+      thisProduct.image3 = product.image3;
     }
   });
   return (
@@ -87,10 +95,26 @@ function ProductEdit({ id }: ProductID) {
         fieldRef={register}
         defaultValue={thisProduct.price}
       />
-      <label htmlFor="image">Новый URL изображения:</label>
+      <label htmlFor="image">Новый URL главного изображения:</label>
       <Field
         type="text"
         name="image"
+        className="field-main"
+        fieldRef={register}
+        defaultValue={thisProduct.image}
+      />
+      <label htmlFor="image">Новый URL второстепенного изображения:</label>
+      <Field
+        type="text"
+        name="image2"
+        className="field-main"
+        fieldRef={register}
+        defaultValue={thisProduct.image}
+      />
+      <label htmlFor="image">Новый URL второстепенного изображения:</label>
+      <Field
+        type="text"
+        name="image3"
         className="field-main"
         fieldRef={register}
         defaultValue={thisProduct.image}

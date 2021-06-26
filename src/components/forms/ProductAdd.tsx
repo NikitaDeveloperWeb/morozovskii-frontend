@@ -13,6 +13,8 @@ export interface ProductProps {
   composition: string;
   price: number;
   image: string;
+  image2?: string;
+  image3?: string;
   type: string;
 }
 
@@ -20,6 +22,8 @@ const ProductAddSchema = yup.object().shape({
   title: yup.string(),
   composition: yup.string(),
   image: yup.string(),
+  image2: yup.string(),
+  image3: yup.string(),
   type: yup.string(),
   price: yup.number(),
 });
@@ -44,8 +48,12 @@ function ProductAdd() {
       <Field type="text" name="title" className="field-main" fieldRef={register} />
       <label htmlFor="price">Цена:</label>
       <Field type="text" name="price" className="field-main" fieldRef={register} />
-      <label htmlFor="image">URL изображения:</label>
+      <label htmlFor="image">URL главного изображения:</label>
       <Field type="text" name="image" className="field-main" fieldRef={register} />
+      <label htmlFor="image">URL второстепенного изображения:</label>
+      <Field type="text" name="image2" className="field-main" fieldRef={register} />
+      <label htmlFor="image">URL второстепенного изображения:</label>
+      <Field type="text" name="image3" className="field-main" fieldRef={register} />
       <label htmlFor="type">Тип Продукта:</label>
       <select name="type" id="" ref={register}>
         <option value="Хлеб">Хлеб</option>

@@ -7,6 +7,8 @@ export interface Products {
   price: string;
   type: string;
   image: string;
+  image2: string;
+  image3: string;
 }
 
 export interface ProductsState {

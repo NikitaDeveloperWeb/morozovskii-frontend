@@ -38,6 +38,8 @@ export const ProductsAPI = {
       {
         title: datas.title,
         image: datas.image,
+        image2: datas.image2 ? datas.image2 : '',
+        image3: datas.image3 ? datas.image3 : '',
         composition: datas.composition,
         price: datas.price,
         type: datas.type,

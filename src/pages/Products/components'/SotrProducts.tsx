@@ -53,6 +53,8 @@ function SotrProducts() {
                 composition={bread.composition}
                 price={bread.price}
                 image={bread.image}
+                image2={bread.image2}
+                image3={bread.image3}
               />
             </li>
           ))}
@@ -66,6 +68,8 @@ function SotrProducts() {
                 composition={loaves.composition}
                 price={loaves.price}
                 image={loaves.image}
+                image2={loaves.image2}
+                image3={loaves.image3}
               />
             </li>
           ))}
@@ -79,6 +83,8 @@ function SotrProducts() {
                 composition={buns.composition}
                 price={buns.price}
                 image={buns.image}
+                image2={buns.image2}
+                image3={buns.image3}
               />
             </li>
           ))}
