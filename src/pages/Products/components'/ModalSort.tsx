@@ -24,9 +24,9 @@ function ModalSort({ _id, title, image, image2, image3, composition, price }: Mo
   // slider
   const [activeImage, setActiveImage] = React.useState(image2);
 
-  const handlerActiveImage = (image: string) => {
-    console.log(image);
-    setActiveImage(image);
+  const handlerActiveImage = (imageA: string) => {
+    console.log(imageA);
+    setActiveImage(imageA);
   };
 
   const handleOutsideClick = (event: any) => {

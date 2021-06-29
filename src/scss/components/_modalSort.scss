@@ -39,12 +39,14 @@
       justify-content: space-around;
       align-items: center;
       &__img {
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         img {
           padding: 5px;
-          width: 400px;
+          // min-height: 250px;
+          // width: 1000px;
         }
         .arrow {
           width: 30px;
@@ -57,8 +59,13 @@
         }
       }
       &__data {
+        flex: 50%;
         margin-left: 50px;
         font-size: 18px;
+        p {
+          height: 150px;
+          overflow-y: scroll;
+        }
       }
     }
   }
@@ -66,6 +73,7 @@
 .modalSort {
   position: relative;
   width: 240px;
+  height: 360px;
   padding: 10px;
   border: 1px solid var(--color-border-field);
   border-radius: 10px;
@@ -82,7 +90,7 @@
     text-align: center;
   }
   img {
-    width: 120px;
+    width: 200px;
     padding: 5px;
   }
   button {

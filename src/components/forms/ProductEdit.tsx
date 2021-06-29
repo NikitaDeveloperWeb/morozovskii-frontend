@@ -109,7 +109,7 @@ function ProductEdit({ id }: ProductID) {
         name="image2"
         className="field-main"
         fieldRef={register}
-        defaultValue={thisProduct.image}
+        defaultValue={thisProduct.image2}
       />
       <label htmlFor="image">Новый URL второстепенного изображения:</label>
       <Field
@@ -117,13 +117,13 @@ function ProductEdit({ id }: ProductID) {
         name="image3"
         className="field-main"
         fieldRef={register}
-        defaultValue={thisProduct.image}
+        defaultValue={thisProduct.image3}
       />
       <label htmlFor="type">Новый тип Продукта:</label>
       <select name="type" id="" ref={register} defaultValue={thisProduct.type}>
         <option value="Хлеб">Хлеб</option>
         <option value="Батон">Батон</option>
-        <option value="Булочное изделие">Булочное изделие</option>
+        <option value="Хлебобулочное изделие">Хлебобулочное изделие</option>
       </select>
       <label htmlFor="composition">Новый состав:</label>
       <textarea name="composition" ref={register} defaultValue={thisProduct.composition}></textarea>
